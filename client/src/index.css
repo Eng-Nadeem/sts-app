@@ -4,6 +4,30 @@
 @tailwind components;
 @tailwind utilities;
 
+
+[dir="rtl"] * {
+  text-align: right;
+}
+
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .mr-4 {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
 @layer base {
   * {
     @apply border-border;
