@@ -120,9 +120,7 @@ const RechargeScreen = () => {
 		<div className="slide-in px-4 pt-4">
 			<Card>
 				<CardContent className="p-4">
-					<h2 className="text-lg font-semibold mb-4">
-						Recharge Meter
-					</h2>
+					<h2 className="text-lg font-semibold mb-4">شحن العداد</h2>
 
 					<Form {...form}>
 						<form
@@ -134,13 +132,13 @@ const RechargeScreen = () => {
 								name="meterNumber"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Meter Number</FormLabel>
+										<FormLabel>رقم العداد</FormLabel>
 										<div className="relative">
 											<Gauge className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
 											<FormControl>
 												<Input
 													{...field}
-													placeholder="Enter 11-digit meter number"
+													placeholder="ادخل رقم العداد المكون من 3 ارقام"
 													className={`pl-10 ${
 														!validateMeterNumber(
 															field.value
@@ -164,14 +162,14 @@ const RechargeScreen = () => {
 								render={({ field }) => (
 									<FormItem>
 										<FormLabel>
-											Meter Nickname (Optional)
+											اسم العداد (اختياري)
 										</FormLabel>
 										<div className="relative">
 											<TagIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
 											<FormControl>
 												<Input
 													{...field}
-													placeholder="e.g. Home, Office, Shop"
+													placeholder="المنزل ، المكتب ، المتجر"
 													className="pl-10"
 												/>
 											</FormControl>
@@ -187,7 +185,7 @@ const RechargeScreen = () => {
 								name="amount"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Amount</FormLabel>
+										<FormLabel>الكمية</FormLabel>
 										<div className="grid grid-cols-3 gap-2 mb-2">
 											{PRESET_AMOUNTS.map((amount) => (
 												<Button
@@ -228,7 +226,7 @@ const RechargeScreen = () => {
 														field.onChange(value);
 														setPresetAmount(null);
 													}}
-													placeholder="Enter custom amount"
+													placeholder="ادخل قيمة الشحن"
 													className={`pl-10 ${
 														!validateAmount(
 															field.value
@@ -251,7 +249,7 @@ const RechargeScreen = () => {
 								name="paymentMethod"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Payment Method</FormLabel>
+										<FormLabel>طريقة الدفع</FormLabel>
 										<FormControl>
 											<RadioGroup
 												onValueChange={field.onChange}
@@ -268,7 +266,7 @@ const RechargeScreen = () => {
 														className="flex-1 flex items-center cursor-pointer">
 														<CreditCardIcon className="h-4 w-4 mr-2 text-gray-700" />
 														<span>
-															Credit/Debit Card
+															بطاقة ائتمان/خصم
 														</span>
 													</Label>
 													<ChevronRightIcon className="h-4 w-4 text-gray-400" />
@@ -284,9 +282,7 @@ const RechargeScreen = () => {
 														htmlFor="mobile-money"
 														className="flex-1 flex items-center cursor-pointer">
 														<SmartphoneIcon className="h-4 w-4 mr-2 text-gray-700" />
-														<span>
-															Mobile Money
-														</span>
+														<span>موبايل موني</span>
 													</Label>
 													<ChevronRightIcon className="h-4 w-4 text-gray-400" />
 												</div>
@@ -298,7 +294,7 @@ const RechargeScreen = () => {
 							/>
 
 							<Button type="submit" className="w-full">
-								Continue to Payment
+								اكمال الدفع
 							</Button>
 						</form>
 					</Form>
