@@ -286,16 +286,16 @@ const MetersScreen = () => {
 					))}
 				</div>
 			) : (
-				<Card className="text-center p-8">
+				<Card className="!text-center p-8">
 					<div className="mb-4">
 						<div className="bg-primary/10 h-20 w-20 rounded-full flex items-center justify-center mx-auto">
 							<BoltIcon className="h-10 w-10 text-primary" />
 						</div>
 					</div>
-					<h3 className="text-lg font-semibold mb-2">
+					<h3 className="text-lg font-semibold mb-2 !text-center">
 						لا يوجد عدادات مضافة
 					</h3>
-					<p className="text-gray-500 mb-6 max-w-md mx-auto">
+					<p className="text-gray-500 mb-6 max-w-md mx-auto !text-center">
 						لم تُضِف أي عدادات كهرباء بعد. أضف عدادًا لبدء إدارته
 						وإعادة شحنه.
 					</p>
