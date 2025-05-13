@@ -293,15 +293,15 @@ const MetersScreen = () => {
 						</div>
 					</div>
 					<h3 className="text-lg font-semibold mb-2">
-						No Meters Added
+						لا يوجد عدادات مضافة
 					</h3>
 					<p className="text-gray-500 mb-6 max-w-md mx-auto">
-						You haven't added any electricity meters yet. Add a
-						meter to start managing and recharging it.
+						لم تُضِف أي عدادات كهرباء بعد. أضف عدادًا لبدء إدارته
+						وإعادة شحنه.
 					</p>
 					<Button onClick={() => setIsAddDialogOpen(true)}>
 						<PlusIcon className="mr-2 h-4 w-4" />
-						Add Your First Meter
+						اضافة اول عداد لك
 					</Button>
 				</Card>
 			)}
@@ -312,7 +312,7 @@ const MetersScreen = () => {
 					<DialogHeader>
 						<DialogTitle>Add New Meter</DialogTitle>
 						<DialogDescription>
-							Enter your meter details to add it to your account
+							أدخل تفاصيل العداد الخاص بك لإضافته إلى حسابك
 						</DialogDescription>
 					</DialogHeader>
 
@@ -325,11 +325,11 @@ const MetersScreen = () => {
 								name="meterNumber"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Meter Number</FormLabel>
+										<FormLabel>رقم العداد</FormLabel>
 										<FormControl>
 											<Input
 												{...field}
-												placeholder="e.g. 12345678901"
+												placeholder="على سبيل المثال 931"
 											/>
 										</FormControl>
 										<FormMessage />
@@ -342,11 +342,11 @@ const MetersScreen = () => {
 								name="nickname"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Nickname</FormLabel>
+										<FormLabel>الاسم</FormLabel>
 										<FormControl>
 											<Input
 												{...field}
-												placeholder="e.g. Home, Office"
+												placeholder="المنزل ، المكتب ، المتجر"
 											/>
 										</FormControl>
 										<FormMessage />
@@ -359,11 +359,11 @@ const MetersScreen = () => {
 								name="address"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Address</FormLabel>
+										<FormLabel>العنوان</FormLabel>
 										<FormControl>
 											<Input
 												{...field}
-												placeholder="Property address"
+												placeholder="العنوان الخاص بك"
 											/>
 										</FormControl>
 										<FormMessage />
@@ -376,11 +376,11 @@ const MetersScreen = () => {
 								name="customerName"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Customer Name</FormLabel>
+										<FormLabel>اسم المشترك</FormLabel>
 										<FormControl>
 											<Input
 												{...field}
-												placeholder="Name on the bill"
+												placeholder="الاسم الذي سيظهر على الفاتورة"
 											/>
 										</FormControl>
 										<FormMessage />
@@ -404,7 +404,7 @@ const MetersScreen = () => {
 											Processing
 										</span>
 									) : (
-										<span>Add Meter</span>
+										<span>اضافة العداد</span>
 									)}
 								</Button>
 							</DialogFooter>
@@ -417,9 +417,9 @@ const MetersScreen = () => {
 			<Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
 				<DialogContent>
 					<DialogHeader>
-						<DialogTitle>Edit Meter</DialogTitle>
+						<DialogTitle>تعديل العداد</DialogTitle>
 						<DialogDescription>
-							Update your meter details
+							تعديل تفاصيل العداد الخاص بك
 						</DialogDescription>
 					</DialogHeader>
 
@@ -432,7 +432,7 @@ const MetersScreen = () => {
 								name="meterNumber"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Meter Number</FormLabel>
+										<FormLabel>رقم العداد</FormLabel>
 										<FormControl>
 											<Input {...field} disabled />
 										</FormControl>
@@ -446,11 +446,11 @@ const MetersScreen = () => {
 								name="nickname"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Nickname</FormLabel>
+										<FormLabel>الاسم</FormLabel>
 										<FormControl>
 											<Input
 												{...field}
-												placeholder="e.g. Home, Office"
+												placeholder="المنزل ، المكتب ، المتجر"
 											/>
 										</FormControl>
 										<FormMessage />
@@ -463,11 +463,11 @@ const MetersScreen = () => {
 								name="address"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Address</FormLabel>
+										<FormLabel>العنوان</FormLabel>
 										<FormControl>
 											<Input
 												{...field}
-												placeholder="Property address"
+												placeholder="العنوان الخاص بك"
 											/>
 										</FormControl>
 										<FormMessage />
@@ -480,11 +480,11 @@ const MetersScreen = () => {
 								name="customerName"
 								render={({ field }) => (
 									<FormItem>
-										<FormLabel>Customer Name</FormLabel>
+										<FormLabel>اسمم المشترك</FormLabel>
 										<FormControl>
 											<Input
 												{...field}
-												placeholder="Name on the bill"
+												placeholder="الاسم الذي سيظهر على الفاتورة"
 											/>
 										</FormControl>
 										<FormMessage />
@@ -508,7 +508,7 @@ const MetersScreen = () => {
 											Saving
 										</span>
 									) : (
-										<span>Save Changes</span>
+										<span>حفظ التغيرات</span>
 									)}
 								</Button>
 							</DialogFooter>
