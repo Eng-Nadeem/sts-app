@@ -28,7 +28,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import MeterCard from "@/components/MeterCard";
 import TransactionCard from "@/components/TransactionCard";
 import { formatCurrency } from "@/lib/utils";
-import { Meter, Transaction, Debt, User } from "@shared/schema";
+// import { Meter, Transaction, Debt, User } from "@shared/schema";
 // import React from "react";
 interface QuickActionButtonProps {
 	icon: React.ReactNode;
@@ -315,9 +315,9 @@ const DashboardScreen = () => {
 								/>
 							))
 						) : (
-							<div className="py-8 px-4 text-center w-full bg-gray-50/50 rounded-xl border border-gray-100">
+							<div className="py-8 px-4 !text-center w-full bg-gray-50/50 rounded-xl border border-gray-100">
 								<PlusCircleIcon className="h-10 w-10 text-gray-400 mx-auto mb-3" />
-								<p className="text-sm text-gray-500 mb-4">
+								<p className="text-sm text-gray-500 mb-4 !text-center">
 									لا يوجد عدادات تم اضافتها لحد الأن
 								</p>
 								<Button
@@ -372,9 +372,9 @@ const DashboardScreen = () => {
 								/>
 							))
 						) : (
-							<div className="py-8 text-center bg-gray-50/50 rounded-xl border border-gray-100">
+							<div className="py-8 !text-center bg-gray-50/50 rounded-xl border border-gray-100">
 								<ReceiptIcon className="h-10 w-10 text-gray-400 mx-auto mb-3" />
-								<p className="text-sm text-gray-500 mb-3">
+								<p className="text-sm text-gray-500 mb-3 !text-center">
 									لم يتم إجراء أي معاملات بعد
 								</p>
 								<Button
@@ -479,9 +479,9 @@ const DashboardScreen = () => {
 						{!userProfile?.fullName &&
 							!userProfile?.address &&
 							!userProfile?.phone && (
-								<div className="text-center p-4 bg-primary/5 rounded-xl border border-primary/10">
+								<div className="!text-center p-4 bg-primary/5 rounded-xl border border-primary/10">
 									<UserCogIcon className="h-6 w-6 text-primary/60 mx-auto mb-2" />
-									<p className="text-sm text-gray-600 mb-3">
+									<p className="text-sm text-gray-600 mb-3 !text-center">
 										أكمل ملفك الشخصي للوصول إلى جميع الميزات
 									</p>
 									<Button

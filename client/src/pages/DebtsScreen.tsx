@@ -368,10 +368,10 @@ const DebtsScreen = () => {
 							<div className="bg-green-100 mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-3">
 								<CheckCircleIcon className="h-8 w-8 text-green-600" />
 							</div>
-							<p className="text-gray-800 font-medium mb-1">
+							<p className="text-gray-800 font-medium mb-1 !text-center">
 								لا يوجد ديون مستحقة
 							</p>
-							<p className="text-gray-500 mb-5">
+							<p className="text-gray-500 mb-5 !text-center">
 								لا يوجد لديك اي ديون مستحقة
 							</p>
 						</>
@@ -385,7 +385,7 @@ const DebtsScreen = () => {
 					) : (
 						<>
 							<AlertTriangleIcon className="h-10 w-10 text-gray-400 mx-auto mb-3" />
-							<p className="text-gray-500">
+							<p className="text-gray-500 !text-center">
 								لم يتم العثور على ديون مستحقة
 							</p>
 						</>

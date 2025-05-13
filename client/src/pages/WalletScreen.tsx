@@ -314,14 +314,14 @@ const WalletScreen = () => {
 								))}
 						</div>
 					) : (
-						<div className="py-10 text-center bg-gray-50/50 rounded-xl border border-gray-100">
+						<div className="py-10 !text-center bg-gray-50/50 rounded-xl border border-gray-100">
 							<div className="bg-gradient-to-br from-blue-100 to-indigo-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 shadow-sm">
 								<HistoryIcon className="h-8 w-8 text-primary/70" />
 							</div>
-							<p className="text-gray-700 font-medium mb-1">
+							<p className="text-gray-700 font-medium mb-1 !text-center">
 								لا يوجد معاملات حاليا
 							</p>
-							<p className="text-gray-500 text-sm mb-4">
+							<p className="text-gray-500 text-sm mb-4 !text-center">
 								أضف أموالاً إلى محفظتك لتبدأ
 							</p>
 							<Button
